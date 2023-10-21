@@ -9,7 +9,7 @@ function Team() {
       },[])
   return (
 
-    <section className='team my-4' id="team">
+    <section className='team my-5' id="team">
      <div className='container'>
 
      <div className=' text-center' >

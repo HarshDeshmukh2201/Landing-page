@@ -9,8 +9,7 @@ function About() {
         Aos.init();
       },[])
   return (
-    <seaction className="about " id="
-    about">
+    <seaction className="about" id="about">
   <div className="container my-5 ">
    <div className=' text-center'>
      <h1 data-aos="fade-up"  data-aos-offset="200"

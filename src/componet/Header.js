@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import './style.css'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
-import { Link } from 'react-router-dom';
+
 
 function Header() {
   useEffect(()=>{
@@ -12,7 +12,7 @@ function Header() {
   return (<>
  
 
-<div id="carouselExampleCaptions" className="carousel slide">
+<div id="/" className="carousel slide">
 <div className="carousel-indicators">
   <button
     type="button"
@@ -84,4 +84,4 @@ function Header() {
   )
 }
 
-export default Header
+export default Header;

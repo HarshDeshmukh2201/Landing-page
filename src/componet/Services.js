@@ -9,7 +9,7 @@ function Services() {
         Aos.init();
       },[])
   return (
-    <section className='servies py-5 bg-light' id="servies">
+    <section className='servies py-5 bg-light' id="services">
    <div className=' text-center'>
       <h1 data-aos="fade-up"  data-aos-offset="200"> Our<span className='text-info'> servies</span></h1>
       <hr className='w-25 m-auto'></hr>
@@ -23,7 +23,7 @@ function Services() {
       <i class="fa-brands fa-discord bg-primary p-2 text-white rounded mb-2"></i>
         <h5 class="card-title">Special title treatment</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="a" class="btn btn-primary">Go somewhere</a>
       </div>
     </div></div>
       <div className="col-sm-12 col-md-4"><div class="card">
@@ -31,7 +31,7 @@ function Services() {
       <i class="fa-solid fa-code bg-white p-2 text-Dark rounded mb-2"></i>
         <h5 class="card-title">Web Development</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="a" class="btn btn-primary">Go somewhere</a>
       </div>
     </div></div>
       <div className="col-sm-12 col-md-4"><div class="card">
@@ -39,7 +39,7 @@ function Services() {
       <i class="fa-brands fa-android bg-primary p-2 text-white rounded mb-2"></i>
         <h5 class="card-title">App Development</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="a" class="btn btn-primary">Go somewhere</a>
       </div>
     </div></div>
     </div>
@@ -51,7 +51,7 @@ function Services() {
 <i class="fa-brands fa-discord bg-primary p-2 text-white rounded mb-2"></i>
   <h5 class="card-title">Graphics Design</h5>
   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
+  <a href="a" class="btn btn-primary">Go somewhere</a>
 </div>
 </div></div>
 <div className="col-sm-12 col-md-4"><div class="card">
@@ -59,7 +59,7 @@ function Services() {
 <i class="fa-brands fa-android bg-white p-2 text-Dark rounded mb-2"></i>
   <h5 class="card-title">App Development</h5>
   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
+  <a href="a" class="btn btn-primary">Go somewhere</a>
 </div>
 </div></div>
 <div className="col-sm-12 col-md-4"><div class="card">
@@ -67,7 +67,7 @@ function Services() {
 <i class="fa-solid fa-code bg-primary p-2 text-white rounded mb-2"></i>
   <h5 class="card-title">Web Development</h5>
   <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
+  <a href="a" class="btn btn-primary">Go somewhere</a>
 </div>
 </div></div>
 </div>
