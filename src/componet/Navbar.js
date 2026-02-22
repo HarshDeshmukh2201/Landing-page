@@ -5,25 +5,26 @@ function Navbar() {
  const [active, setActive]=useState("home");
 
 
- const listen =()=>{
-  
+const listen =()=>{
+
   const winScroll= document.body.scrollTop || document.documentElement.scrollTop;
 
+  const sections = [
+    { id: "home", offset: 0 },
+    { id: "about", offset: 608 },
+    { id: "services", offset: 1338 },
+    { id: "portfolio", offset: 1993 },
+    { id: "testimonials", offset: 2661 },
+    { id: "team", offset: 3333 },
+    { id: "contact", offset: 4000 }
+  ];
 
-  if(winScroll<608){
-     setActive("home")
-  } else if (winScroll<1338.6666259765624){
-  //  setActive("about")
-  }else if ( winScroll<1993){
-  // setActive("services")
-  }else if ( winScroll<2661){
-  //  setActive("team")
-  }
-   
-    else{
-   //   setActive("contact")
-   
+  for (let i = sections.length - 1; i >= 0; i--) {
+    if (winScroll >= sections[i].offset) {
+      setActive(sections[i].id);
+      break;
     }
+  }
 }
 
 
@@ -43,7 +44,14 @@ const about =()=>{
 
 const services =()=>{
   setActive("services")
+}
 
+const portfolio =()=>{
+  setActive("portfolio")
+}
+
+const testimonials =()=>{
+  setActive("testimonials")
 }
 
 const team =()=>{
@@ -57,13 +65,20 @@ const contact =()=>{
 
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary px-3 fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-custom fixed-top">
       <div className="container-fluid">
-        <a className="navbar-brand fs-3" href="#">
-          Nav<span className="text-info">tech</span>
+        <a className="navbar-brand d-flex align-items-center" href="#">
+          <div className="brand-logo me-2">
+            <i className="fas fa-camera text-whitex"></i>
+          </div>
+          <div className="brand-text">
+            <span className="brand-main">LensCraft</span>
+            <span className="brand-tag text-primary fw-bold">Photography</span>
+          </div>
         </a>
+
         <button
-          className="navbar-toggler "
+          className="navbar-toggler custom-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -71,17 +86,18 @@ const contact =()=>{
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon" />
+          <span className="navbar-toggler-icon"></span>
         </button>
+
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2  fs-6 mb-lg-0 text-center">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link
                 to="/"
                 smooth={true}
                 offset={-10}
                 duration={1000}
-                className={active === "home" ?"nav-link active text-info fw-bold":"nav-link active"}
+                className={`nav-link ${active === "home" ? "active" : ""}`}
                 onClick={home}
                 style={{cursor: "pointer"}}
               >
@@ -95,13 +111,12 @@ const contact =()=>{
                 smooth={true}
                 offset={-100}
                 duration={1000}
-                className={active === "about"?"nav-link active text-info fw-bold":" nav-link active"}
+                className={`nav-link ${active === "about" ? "active" : ""}`}
                 aria-current="page"
                 onClick={about}
                 style={{cursor: "pointer"}}
-               
-               >
-                About
+              >
+                About Us
               </Link>
             </li>
 
@@ -112,7 +127,7 @@ const contact =()=>{
                   smooth={true}
                   offset={-60}
                   duration={1000}
-                  className={active === "services"?"nav-link active text-info fw-bold":" nav-link active"}
+                  className={`nav-link ${active === "services" ? "active" : ""}`}
                   aria-current="page"
                   onClick={services}
                   style={{cursor: "pointer"}}
@@ -122,18 +137,32 @@ const contact =()=>{
             </li>
 
             <li className="nav-item">
+              <Link
+                  to="portfolio"
+                  spy={true}
+                  smooth={true}
+                  offset={-60}
+                  duration={1000}
+                  className={`nav-link ${active === "portfolio" ? "active" : ""}`}
+                  aria-current="page"
+                  onClick={portfolio}
+                  style={{cursor: "pointer"}}
+              >
+                Portfolio
+              </Link>
+            </li>
+
+            <li className="nav-item">
               <Link to="team"
                   spy={true}
                   smooth={true}
                   offset={-170}
                   duration={1000}
-                  className={active === "team"?"nav-link active text-info fw-bold":" nav-link active"}
+                  className={`nav-link ${active === "team" ? "active" : ""}`}
                   aria-current="page"
                   onClick={team}
                   style={{cursor: "pointer"}}>
-
-                    
-                Our team
+                Our Team
               </Link>
             </li>
 
@@ -144,15 +173,20 @@ const contact =()=>{
                 smooth={true}
                 offset={350}
                 duration={1000}
-                className={active === "contact"?"nav-link active text-info fw-bold":" nav-link active"}
+                className={`nav-link ${active === "contact" ? "active" : ""}`}
                 aria-current="page"
                 style={{cursor: "pointer"}}
                 onClick={contact}>
-               
                 Contact
               </Link>
             </li>
           </ul>
+
+          <div className="navbar-actions d-flex align-items-center ms-3">
+            <a href="#contact" className="btn btn-primary btn-sm">
+              Book Now
+            </a>
+          </div>
         </div>
       </div>
     </nav>

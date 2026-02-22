@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
 import "./style.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useForm } from "react-hook-form";
+import emailjs from '@emailjs/browser';
 
 function Contact() {
+  const [showThanks, setShowThanks] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -13,11 +17,37 @@ function Contact() {
     trigger,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => {
-   
-      localStorage.setItem('data', JSON.stringify(data));
-  
-    reset();
+
+  const onSubmit = async (data) => {
+    setIsSubmitting(true);
+    try {
+      // Using a demo emailjs service - in production, you'd set up your own
+      await emailjs.send(
+        'service_demo', // Replace with your actual service ID
+        'template_demo', // Replace with your actual template ID
+        {
+          from_name: data.name,
+          from_email: data.email,
+          message: data.message,
+          address: data.address,
+          city: data.city,
+          state: data.state
+        },
+        'public_key_demo' // Replace with your actual public key
+      );
+
+      setShowThanks(true);
+      reset();
+    } catch (error) {
+      console.log('Failed to send email:', error.text);
+      alert('Sorry, there was an error sending your message. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const closeThanks = () => {
+    setShowThanks(false);
   };
 
   useEffect(() => {
@@ -151,8 +181,18 @@ function Contact() {
               </div>
 
               <div className="col-12">
-                <button type="submit" className="btn btn-primary">
-                  Submit
+                <button type="submit" className="btn btn-primary btn-lg w-100" disabled={isSubmitting}>
+                  {isSubmitting ? (
+                    <>
+                      <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <i className="fas fa-paper-plane me-2"></i>
+                      Send Message
+                    </>
+                  )}
                 </button>
               </div>
             </form>
@@ -161,10 +201,43 @@ function Contact() {
             <img
               src={require("../img/contact.jpg")}
               className="img-fluid img-thumbnail p-2"
-            ></img>
+              alt="Contact us for professional photography services"
+            />
           </div>
         </div>
       </div>
+
+      {/* Thanks Modal */}
+      {showThanks && (
+        <div className="modal fade show d-block" style={{backgroundColor: 'rgba(0,0,0,0.8)'}} tabIndex="-1">
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content">
+              <div className="modal-body text-center p-5">
+                <div className="success-icon mb-4">
+                  <i className="fas fa-check-circle fa-4x text-success"></i>
+                </div>
+                <h3 className="modal-title mb-3">Thank You!</h3>
+                <p className="mb-4">
+                  Your message has been sent successfully. We'll get back to you within 24 hours.
+                </p>
+                <div className="celebration-elements">
+                  <div className="confetti-piece"></div>
+                  <div className="confetti-piece"></div>
+                  <div className="confetti-piece"></div>
+                </div>
+                <button
+                  type="button"
+                  className="btn btn-primary btn-lg px-4"
+                  onClick={closeThanks}
+                >
+                  <i className="fas fa-heart me-2"></i>
+                  Continue
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

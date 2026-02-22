@@ -18,56 +18,56 @@ function Services() {
     <div className=" row mt-5 container m-auto  " data-aos="zoom-out-up" data-aos-offset="300">
 
       <div className="col-sm-12 col-md-4">
-        <div class="card">
-      <div class="card-body">
-      <i class="fa-brands fa-discord bg-primary p-2 text-white rounded mb-2"></i>
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="a" class="btn btn-primary">Go somewhere</a>
+        <div className="card service-card">
+      <div className="card-body text-center">
+      <i className="fas fa-heart bg-primary p-3 text-white rounded-circle mb-3 fa-2x"></i>
+        <h5 className="card-title">Wedding Photography</h5>
+        <p className="card-text">Capture your special day with our professional wedding photography services. From engagement shoots to the reception, we document every magical moment.</p>
+        <a href="#contact" className="btn btn-primary">Learn More</a>
       </div>
     </div></div>
-      <div className="col-sm-12 col-md-4"><div class="card">
-      <div class="card-body bg-primary">
-      <i class="fa-solid fa-code bg-white p-2 text-Dark rounded mb-2"></i>
-        <h5 class="card-title">Web Development</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="a" class="btn btn-primary">Go somewhere</a>
+      <div className="col-sm-12 col-md-4"><div className="card service-card">
+      <div className="card-body text-center bg-primary text-white">
+      <i className="fas fa-users bg-white p-3 text-primary rounded-circle mb-3 fa-2x"></i>
+        <h5 className="card-title">Event Photography</h5>
+        <p className="card-text">Professional coverage for corporate events, parties, and celebrations. We ensure every important moment is beautifully documented.</p>
+        <a href="#contact" className="btn btn-light">Learn More</a>
       </div>
     </div></div>
-      <div className="col-sm-12 col-md-4"><div class="card">
-      <div class="card-body">
-      <i class="fa-brands fa-android bg-primary p-2 text-white rounded mb-2"></i>
-        <h5 class="card-title">App Development</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="a" class="btn btn-primary">Go somewhere</a>
+      <div className="col-sm-12 col-md-4"><div className="card service-card">
+      <div className="card-body text-center">
+      <i className="fas fa-camera bg-primary p-3 text-white rounded-circle mb-3 fa-2x"></i>
+        <h5 className="card-title">Portrait Photography</h5>
+        <p className="card-text">Beautiful portrait sessions for individuals, families, and professionals. Studio and outdoor options available.</p>
+        <a href="#contact" className="btn btn-primary">Learn More</a>
       </div>
     </div></div>
     </div>
     <div className=" row my-4 container m-auto ">
 
 <div className="col-sm-12 col-md-4">
-  <div class="card">
-<div class="card-body">
-<i class="fa-brands fa-discord bg-primary p-2 text-white rounded mb-2"></i>
-  <h5 class="card-title">Graphics Design</h5>
-  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-  <a href="a" class="btn btn-primary">Go somewhere</a>
+  <div className="card service-card">
+<div className="card-body text-center">
+<i className="fas fa-tree bg-primary p-3 text-white rounded-circle mb-3 fa-2x"></i>
+  <h5 className="card-title">Nature Photography</h5>
+  <p className="card-text">Stunning landscape and nature photography. Perfect for travel, real estate, and artistic projects.</p>
+  <a href="#contact" className="btn btn-primary">Learn More</a>
 </div>
 </div></div>
-<div className="col-sm-12 col-md-4"><div class="card">
-<div class="card-body bg-primary">
-<i class="fa-brands fa-android bg-white p-2 text-Dark rounded mb-2"></i>
-  <h5 class="card-title">App Development</h5>
-  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-  <a href="a" class="btn btn-primary">Go somewhere</a>
+<div className="col-sm-12 col-md-4"><div className="card service-card">
+<div className="card-body text-center bg-primary text-white">
+<i className="fas fa-edit bg-white p-3 text-primary rounded-circle mb-3 fa-2x"></i>
+  <h5 className="card-title">Photo Editing</h5>
+  <p className="card-text">Professional photo editing and retouching services. Enhance your images with our expert editing techniques.</p>
+  <a href="#contact" className="btn btn-light">Learn More</a>
 </div>
 </div></div>
-<div className="col-sm-12 col-md-4"><div class="card">
-<div class="card-body">
-<i class="fa-solid fa-code bg-primary p-2 text-white rounded mb-2"></i>
-  <h5 class="card-title">Web Development</h5>
-  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-  <a href="a" class="btn btn-primary">Go somewhere</a>
+<div className="col-sm-12 col-md-4"><div className="card service-card">
+<div className="card-body text-center">
+<i className="fas fa-video bg-primary p-3 text-white rounded-circle mb-3 fa-2x"></i>
+  <h5 className="card-title">Video Services</h5>
+  <p className="card-text">Cinematic wedding videos and event videography. Complete multimedia coverage for your special occasions.</p>
+  <a href="#contact" className="btn btn-primary">Learn More</a>
 </div>
 </div></div>
 </div>

@@ -13,12 +13,11 @@ function ToScroller() {
 const listen =()=>{
     let heightToHidden = 250;
     const winScroll= document.body.scrollTop || document.documentElement.scrollTop;
-  console.log(winScroll)
 
     if(winScroll>heightToHidden){
-        setVisible(false)
-    }else{
         setVisible(true)
+    }else{
+        setVisible(false)
     }
 }
 
@@ -28,7 +27,7 @@ const listen =()=>{
   
   return (
     <>
-    <div  onClick={goTotop} className={visible ? "d-none   ":"rounded-circle bg-info text-center text-white  posit  "} style={{width:"75px" ,height:"75px " }} > < HiArrowCircleUp/> </div>
+    <div  onClick={goTotop} className={visible ? "rounded-circle bg-info text-center text-white posit" : "d-none"} style={{width:"75px" ,height:"75px " }} > <HiArrowCircleUp/> </div>
     
     </>
  )
