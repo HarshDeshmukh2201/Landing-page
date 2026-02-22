@@ -36,18 +36,7 @@ function FAQ() {
             question: "What is included in your photography packages?",
             answer: "Each package includes professional photography, expert editing, high-resolution digital images, and an online gallery. Additional services like albums, prints, and videography can be added. Contact us for detailed package information."
         },
-        {
-            question: "Can I request specific shots or poses during the session?",
-            answer: "Of course! We want to capture the moments that are important to you. We'll discuss your must-have shots during our planning consultation and incorporate them into our shot list."
-        },
-        {
-            question: "Do you shoot in both indoor and outdoor locations?",
-            answer: "Yes, we work in various environments including studios, outdoor locations, churches, banquet halls, and unique venues. We'll help you choose the best location for your specific needs."
-        },
-        {
-            question: "What happens if it rains on the day of my outdoor shoot?",
-            answer: "We always have backup plans for weather-related issues. If needed, we can reschedule or move to an indoor location. Your safety and comfort are our top priorities."
-        }
+        
     ];
 
   return (

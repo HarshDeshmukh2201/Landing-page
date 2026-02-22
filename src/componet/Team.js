@@ -23,7 +23,7 @@ function Team() {
       <div class="card-body ourteam text-center">
         <img src={require("../img/s6.jpg")} className='img-fluid rounded-circle border border-info p-2' alt="" />
         <h5 class="card-title mt-4">Rohan</h5>
-        <p class="card-text">Front-end Developer</p>
+        <p class="card-text">Lead Photographer</p>
         <a href="#" class="btn btn-primary">Read more</a>
       </div>
     </div>
@@ -35,7 +35,7 @@ function Team() {
       <div class="card-body ourteam text-center">
         <img src={require("../img/s1.jpg")} className='img-fluid rounded-circle border border-info p-2' alt="" />
         <h5 class="card-title mt-4">Pranjal</h5>
-        <p class="card-text">Backend-end Developer</p>
+        <p class="card-text">Photo Editor</p>
         <a href="#" class="btn btn-primary">Read more</a>
       </div>
     </div>
@@ -45,7 +45,7 @@ function Team() {
       <div class="card-body ourteam text-center">
         <img src={require("../img/s2.jpg")} className='img-fluid rounded-circle border border-info p-2' alt="" />
         <h5 class="card-title mt-4">Aakash</h5>
-        <p class="card-text">Front-end Developer</p>
+        <p class="card-text">Studio Manager</p>
         <a href="#" class="btn btn-primary">Read more</a>
       </div>
     </div>
